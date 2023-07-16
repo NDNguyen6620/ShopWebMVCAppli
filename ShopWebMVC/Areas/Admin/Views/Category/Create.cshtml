@@ -1,0 +1,51 @@
+﻿@model ShopWebMVC.Models.Category
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h2>Category</h2>
+
+<h4>Create</h4>
+<hr />
+<div class="container">
+    <div class="bg-white p-5">
+        <div class="">
+            <form asp-action="Create" enctype="multipart/form-data" class="row">
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                <div class="form-group col-12 col-md-6">
+                    <label asp-for="Name" class="control-label"></label>
+                    <input asp-for="Name" class="form-control" id="title" placeholder="Enter Name" />
+                    <span asp-validation-for="Name" class="text-danger"></span>
+                </div>
+                <div class="form-group col-12 col-md-4">
+                    <label asp-for="Image" class="control-label"></label>
+                    <input type="file" asp-for="Image" name="files" />
+                    <span asp-validation-for="Image" class="text-danger"></span>
+                </div>
+                <div class="form-group col-12 col-md-4">
+                    <label asp-for="Created_At" class="control-label"></label>
+                    <input asp-for="Created_At" class="form-control" />
+                    <span asp-validation-for="Created_At" class="text-danger"></span>
+                </div>
+
+                <div class="form-group w-100 py-2 border-top">
+                    <input type="submit" value="Create" class="btn btn-primary px-5" />
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}
+
+<div>
+    <a asp-action="Index" class = "btn btn-outline-primary">Back to List</a>
+</div>
+
+

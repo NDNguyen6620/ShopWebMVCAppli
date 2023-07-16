@@ -1,0 +1,25 @@
+html {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  margin-bottom: 60px;
+}
+.bg-loginAdmin {
+    width: 100%;
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-image: linear-gradient(to right, rgba(109,100, 242, .6), rgba(0, 0, 0, .2)), url(https://elead.com.vn/wp-content/uploads/2020/04/anh-mua-thu-dep.jpg);
+    background-size: auto;
+}
